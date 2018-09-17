@@ -49,7 +49,6 @@ public class StackUsingArray {
 		stackNew.push(5);
 		stackNew.display();
 		stackNew.pop();
-		stackNew.pop();
 		stackNew.display();
 
 	}
