@@ -1,4 +1,4 @@
-
+// implementation of queue using array
 public class QueueUsingArray {
 
 	public static int maxArray;

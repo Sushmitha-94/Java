@@ -1,4 +1,5 @@
 
+// implementation of stack using array
 public class StackUsingArray {
 	public static int maxArray;
 	public static int top;

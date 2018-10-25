@@ -1,12 +1,16 @@
 import java.util.ArrayList;
 import java.util.List;
 
+// largest number can be formed using array values
+
 public class NumberArray {
 
 	public static void numberToArray(int[] arrayStr) {
 		List<Integer> list = new ArrayList<Integer>();
 		String str,str1;
 		Boolean isTrue=true;
+		// loop through the array and check the position which makes the number largest and 
+		// save it in arraylist in that order
 		for(int array:arrayStr) {
 			if(list.isEmpty()) {
 				list.add(array);
@@ -16,16 +20,12 @@ public class NumberArray {
 				for(int addS:list) {
 					str=String.valueOf(Integer.toString(array) + Integer.toString(addS));
 					str1=String.valueOf(Integer.toString(addS) + Integer.toString(array));
-					System.out.println("str"+str);
-					System.out.println("str1"+str1);
 					if(Integer.parseInt(str)>Integer.parseInt(str1)) {
 						System.out.println("true");
 						list.add(i, array);
-						
 						isTrue=false;
 						break;
 					}
-					
 					i++;
 				}
 				if(isTrue) {

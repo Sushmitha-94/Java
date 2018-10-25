@@ -1,4 +1,5 @@
 
+// car object
 public class Car {
 	int slotNo;
 	String carNo;

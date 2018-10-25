@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.LinkedList;
 
+// Parking slot assignment and extraction of car information application
 public class parkingSlot {
 
 	
@@ -12,6 +13,7 @@ public class parkingSlot {
 	public static HashMap<String, LinkedList<String>> getByMake;
 	public static HashMap<Integer, String> getBySlot=new HashMap<Integer, String>();
 	
+	// static colors and brand of cars
 	static {
 		getByColor = new HashMap<String, LinkedList<String>>();
 		getByColor.put("Black", new LinkedList<String>());
@@ -30,7 +32,9 @@ public class parkingSlot {
 		getByMake.put("Benz", new LinkedList<String>());
 	}
 	
-	
+	// when car enters, the next available slot is identified using findSlot()
+	// new car object is created
+	// carNo is added to the corresponding colorMap, makeMap, slotMap and carMap
 	public static String enterCar(String carNo,String carColor,String carMake) {
 		String message="There are no slots available";
 		int slotNo=findSlot();
@@ -47,6 +51,7 @@ public class parkingSlot {
 		return message;
 	}
 	
+	// when car exits, car information is deleted from all the maps and free the slot
 	public static String exitCar(String carNo) {
 		String message="Car "+carNo+ "is deallocated";
 		Car carToDelete=getCar.get(carNo);
@@ -58,6 +63,7 @@ public class parkingSlot {
 		return message;
 	}
 	
+	// returns next available slot
 	public static int findSlot() {
 		for(int i=0;i<100;i++) {
 			if(carSlotNo[i]==null || carSlotNo[i]=="")

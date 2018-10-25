@@ -1,4 +1,5 @@
 
+// implementation of queue using linked list
 public class QueueUsingLinkedList {
 
 	public int maxArray;
